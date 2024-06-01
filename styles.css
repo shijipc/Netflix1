@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'poppins',sans-serif;
+    box-sizing:border-box;
+}
+body{
+    background-color:black;
+    color:white;
+}
+.main-header{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(images/back-image.png);
+    padding:10px 8%;
+    background-size:cover;
+    background-position:center;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo{
+    width:150px;
+}
+
+btn{
+    border:0;
+    outline:0;   
+}
+.language{
+    
+    border-radius:4px;
+    background:transparent;
+    color:white;
+    border:1px solid white;
+    padding:7px 10px;
+    font-size:16px;
+    border-radius:4px;
+}
+.signin{
+    background-color:red;
+    color:white;
+    border-radius:4px;
+    font-size:12px;
+    padding:7px 20px;
+    margin-left:10px;
+}
+.main-content{
+    position:absolute;
+    top:50%;
+    left:50%;  
+    transform:translate(-50%,-50%);
+    text-align:center;
+    margin-top:100px;   
+}
+.main-content h1{
+   font-weight:900;
+   font-size:50px;   
+}
+.main-content h3{
+    font-weight:300;
+    margin-bottom:20px;
+}
+
+.email-submit input{
+    background-color:transparent;
+    border:2px solid white;
+    color:white;
+    padding:15px  25px  15px 5px;
+    margin-left:20px; 
+    border-radius:5px; 
+    width: 50%;
+}
+.email-submit button{
+    background:red;
+    border:none;
+    font-size:16px;
+    border-radius:3px;
+    color:white; 
+    padding:15px 20px;  
+}
+
+/* divisions */
+
+.divisions{
+    padding:50px 12%;
+    font-weight:400;
+    font-size:20px;
+   
+}
+.textrow{
+    display:flex;
+    align-items:center;
+    /* border-top:6px solid #333;  */
+    width:100%;       
+}
+.textcol{
+    margin-bottom:25px;
+    padding:25px;    
+}
+.textcol h1{
+  text-align:left;
+  font-weight:800;
+   font-size:40px; 
+   margin-bottom:20px;
+}
+.textcol h3{
+    font-weight:400;
+}
+.image-col{
+    margin-bottom:25px;
+}
+.image-col img{
+  display:block;
+  width:90%;
+  margin:auto;
+}
+
+/* freequently ask questions */
+
+.faskqn{
+    text-align:center;
+    font-size:16px;
+    padding:10px 12%;
+    border-top:6px solid #333;
+}
+.faskqn h1{
+    font-weight:300;
+    font-size:48px;
+    border:none;   
+}
+.box{
+    margin:60px auto;
+    width:100%;
+    max-width:850px;
+    padding:5px;
+    list-style:none;
+}
+.box h3{
+    background-color:#3c3d40;
+    font-size:20px;
+    align-items:center;
+    margin-bottom:20px;   
+    cursor:pointer;
+    padding:20px;
+    margin-bottom:8px;
+    display:flex;
+    position:relative;
+}
+
+.box h3::after{
+    content:'+';
+    font-size:30px;
+    position:absolute;
+    right:10px;  
+} 
+
+.email-submit{
+    max-width:600px;
+    margin:20px auto 60px;
+}
+
+.footer{
+    padding:50px 15% 10px;
+    border-top:7px solid #333;
+    color:#777;     
+}
+.footer h2{
+    font-size:20px;
+    font-weight:300;
+    margin-bottom:30px;
+}
+.footer .col{
+    margin-bottom:30px;  
+}
+.footer .col a{
+    display:block;
+    text-docoration:none;
+    color:15px;
+    margin-bottom:30px:
+}
+.row{
+    display:flex;
+    width:500px;
+    padding-bottom:10px;
+}
+
+/* responsive --using media-query*/
+
+@media only screen and (max-width:600px)
+{
+    .main-header{
+        padding:2rem;
+    }
+    .logo{
+        width:100px;
+    }
+    nav button{
+        padding:5px 10px;
+    }
+    nav .language{
+        padding:4px 8px;
+    }
+    .main-content{
+        position:unset;
+        transform:none;
+        padding-top:50px;
+        padding-bottom:15px;
+    }
+    .main-content h1{
+        font-size:30px;
+
+    }
+    .email-submit button{ 
+        font-size:12px;
+        padding:10px 14px;
+    }
+    .email-submit input{ 
+        font-size:12px;
+        padding:5px 14px;
+    }
+
+    .textcol,.image-col{
+        flex-basis:100%;
+    }
+    /* .textrow{
+        flex-basis:100%;
+    } */
+   .divisions h1{
+       font-size:22px;
+   }
+   .divisions h3{
+       font-size:18px;
+    }
+    .textrow:nth-child(1),.textrow:nth-child(2),.textrow:nth-child(3),.textrow:nth-child(4){
+       flex-direction:column-reverse;
+     }
+     
+     .divisions .textrow{
+        padding:10px 0;
+     }
+
+    .faskqn h1{
+       font-size:22px;
+       padding-top:35px;
+     }
+     .box h3{
+          font-size:14px;
+     } 
+     .data h3{
+        font-size:15px;
+     }
+     .email-submit button{
+        font-size:15px;
+        padding:5px 14px;
+     }
+     .footer h2{
+        font-size:15px;
+     }
+     .col a{
+        font-size:12px;
+     }
+}
+
+
+
+
+
